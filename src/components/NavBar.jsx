@@ -3,8 +3,6 @@ import pic from "../../public/umesh.png";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-scroll";
-import { NavLink } from "react-router-dom";
-
 function Navbar() {
   const [menu, setMenu] = useState(false);
   const navItems = [
@@ -36,7 +34,7 @@ function Navbar() {
           <div className=" flex space-x-2">
             <img src={pic} className="h-12 w-12 rounded-full" alt="" />
             <h1 className="font-semibold text-xl cursor-pointer">
-              Umesh<span className="text-green-500 text-2xl">l</span>
+              <span className="text-green-500 text-2xl">l</span>
               <p className="text-sm">Web Developer</p>
             </h1>
           </div>
@@ -54,7 +52,9 @@ function Navbar() {
                     duration={500}
                     offset={-70}
                     activeClass="active"
-                  ></Link>
+                  >
+                    {text}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -79,7 +79,9 @@ function Navbar() {
                     duration={500}
                     offset={-70}
                     activeClass="active"
-                  ></Link>
+                  >
+                    {text}
+                  </Link>
                 </li>
               ))}
             </ul>
